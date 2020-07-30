@@ -10,10 +10,9 @@ output:
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
-  fig.path = "README-"
+  fig.path = "images/README-"
 )
-library(ggplot2)
-library(GEKSdecomp)
+
 ```
 
 # GEKS-Tornqvist Decomposition
@@ -49,7 +48,7 @@ The primary function provided by the the package is the `GEKS_decomp()` function
 
 This pacakge includes the Turvey dataset as found in the [Consumer Price Index Manual](https://www.ilo.org/wcmsp5/groups/public/---dgreports/---stat/documents/presentation/wcms_331153.pdf).
 
-```{r}
+```{r, turvey-overview}
 library(ggplot2)
 ggplot(turvey, aes(x = month, y = price)) + 
   geom_line(aes(color = commodity)) + 
@@ -85,14 +84,14 @@ contributions <- with(
 
 #Comparing change from 1973-04-30 to 1973-05-31 
 
-contributions
+print(contributions)
 
 ```
 
 
 
 
-```{r}
+```{r, percentage_contrib}
 ggplot(contributions)+geom_bar(aes(x=id,y=p_contrib), stat = "identity")+coord_flip()+ggtitle("Percentage contribution of observation")+geom_label(aes(x=id,y=p_contrib,label=paste0(round(p_contrib*100,1),"%")))+xlab("Product")+ylab("Percentage contribution")
 
 
