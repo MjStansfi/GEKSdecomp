@@ -17,6 +17,9 @@ alternates available for the FEWS (time product dummy) multilateral
 method [FEWS package](https://github.com/MjStansfi/FEWS_package) and
 [TPD decomposition](https://github.com/MjStansfi/TPDDecomp).
 
+See the attached pdf to understand how the code was simplified for
+conditions where either price a or b is missing.
+
 Installation
 ============
 
@@ -99,4 +102,4 @@ print(contributions)
 #> 5: 1973-04-30 1973-05-31      Peaches 1.0000000  0.00000000
 ```
 
-![](images/README-unnamed-chunk-5-1.png)
+![](images/README-percentage_contrib-1.png)
