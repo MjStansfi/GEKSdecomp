@@ -24,7 +24,7 @@ described under section [2.2 Decomposition of the CCD and GEKS Methods](https://
 This package should be coupled with the [GEKS package](https://github.com/MjStansfi/GEKS_package). Also see the alternates available for the FEWS (time product dummy) multilateral method [FEWS package](https://github.com/MjStansfi/FEWS_package) and
 [TPD decomposition](https://github.com/MjStansfi/TPDDecomp).
 
-See the attached pdf to understand how the code was simplified for conditions where either price a or b is missing.
+See the attached pdf, [GEKS proofs](https://github.com/MjStansfi/GEKSdecomp/blob/master/GEKS_proofs.pdf) to understand how the code was simplified for conditions where either price a or b is missing.
 
 # Installation
 
