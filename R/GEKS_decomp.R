@@ -182,7 +182,7 @@ GEKS_decomp <- function(times,
       
       contrib <- prod(p_vector)
       
-    }else{
+    }else{ 
       
       p_prod <- prod(p_vector)
       
@@ -190,14 +190,14 @@ GEKS_decomp <- function(times,
       
       price_b <- prices_df[times_index==end_time & id == choice, (price)]
       
-      
-      if(length(price_a)==0){ #ie doesn't exist
-        price_a <- 1
-      }
-      
-      if(length(price_b)==0){ #ie doesn't exist
-        price_b <- 1
-      }
+      #Will never actually occur now
+      # if(length(price_a)==0){ #ie doesn't exist
+      #   price_a <- 1
+      # }
+      # 
+      # if(length(price_b)==0){ #ie doesn't exist
+      #   price_b <- 1
+      # }
       
       contrib <- (
         (price_b^(b_dot))/

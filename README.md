@@ -1,9 +1,9 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-GEKS-Tornqvist Decomposition
+GEKS-Törnqvist Decomposition
 ============================
 
 This package focuses on one function `GEKSdecomp`, which decomposes the
-multilateral GEWKS-Tornqvist index into the contributions of individual
+multilateral GEKS-Tornqvist index into the contributions of individual
 commodities. The calculation is based purely on the *Decomposing
 Multilateral Price Indexes into the Contributions of Individual
 Commodities* paper written by *Michael Webster* and *Rory C.
@@ -14,32 +14,34 @@ Methods](https://www.researchgate.net/publication/333875150_Decomposing_Multilat
 This package should be coupled with the [GEKS
 package](https://github.com/MjStansfi/GEKS_package). Also see the
 alternates available for the FEWS (time product dummy) multilateral
-method here [FEWS package](https://github.com/MjStansfi/FEWS_package)
-and [TPD decomposition](https://github.com/MjStansfi/TPDDecomp)
+method [FEWS package](https://github.com/MjStansfi/FEWS_package) and
+[TPD decomposition](https://github.com/MjStansfi/TPDDecomp).
 
-\#Installation
+Installation
+============
 
 The GEKS decomposition function can be installed from GitHub using the
 following code
 
-``` r
-
+``` undefined
 devtools::install_github("MjStansfi/GEKSdecomp")
-#> Skipping install of 'GEKSdecomp' from a github remote, the SHA1 (707e7aa3) has not changed since last install.
-#>   Use `force = TRUE` to force installation
+```
 
+``` r
 # Once installed, the package can be loaded as usual
 library(GEKSdecomp)
 ```
 
-\#Usage
+Usage
+=====
 
 The primary function provided by the the package is the `GEKS_decomp()`
 function. Running `?GEKS_decomp()` will give all the required
 information on how to use the function. An example of running the
 `GEKS_decomp()` the function is shown below.
 
-\#Example
+Example
+=======
 
 This pacakge includes the Turvey dataset as found in the [Consumer Price
 Index
@@ -88,8 +90,6 @@ contributions <- with(
 #> Comparing change 1973-04-30 to 1973-05-31 
 #> 1 / 5 2 / 5 3 / 5 4 / 5 5 / 5 
 
-#Comparing change from 1973-04-30 to 1973-05-31 
-
 print(contributions)
 #>          from         to           id   contrib   p_contrib
 #> 1: 1973-04-30 1973-05-31       Apples 1.0349661  0.41102263
@@ -99,8 +99,4 @@ print(contributions)
 #> 5: 1973-04-30 1973-05-31      Peaches 1.0000000  0.00000000
 ```
 
-``` r
-ggplot(contributions)+geom_bar(aes(x=id,y=p_contrib), stat = "identity")+coord_flip()+ggtitle("Percentage contribution of observation")+geom_label(aes(x=id,y=p_contrib,label=paste0(round(p_contrib*100,1),"%")))+xlab("Product")+ylab("Percentage contribution")
-```
-
-![](images/README-percentage_contrib-1.png)
+![](images/README-unnamed-chunk-5-1.png)
