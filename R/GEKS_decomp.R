@@ -18,7 +18,7 @@
 #' in the window, the product of which will (roughly) equal the index movement between the two time periods. \code{p_contrib} is
 #' the standardised percentage contribution of the observation, the sum of which will equal 1.
 #' @examples
-#' library(TPDdecomp)
+#' library(GEKSdecomp)
 #'
 #' contributions <- with(
 #'     turvey,
